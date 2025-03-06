@@ -22,7 +22,7 @@ if (isset($_GET['time'])) {
             $result = "Pada jam $inputTime Andi sedang melakukan: $activity[2]";
             break;
         } else {
-            $result = "ngaco, dah tidur orangnya.";
+            $result = "pas jam $inputTime ga tau Andi lagi ngapain";
         }
     }
 }
@@ -49,12 +49,16 @@ if (isset($_GET['time'])) {
         th {
             background-color: #f4f4f4;
         }
+        h3 {
+            padding: 10px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
     <h2>Jadwal Aktivitas Andi</h2>
     <form method="GET">
-        <label for="time">Masukkan Waktu (HH:MM): </label>
+        <label for="time">Masukkan Waktu (Masih sebatas yang ada di tabel :3): </label>
         <input type="time" id="time" name="time" required>
         <button type="submit">Cek Aktivitas</button>
     </form>
@@ -73,5 +77,15 @@ if (isset($_GET['time'])) {
             </tr>
         <?php endforeach; ?>
     </table>
+        <h3 style="color: #9c27b0;">1. Apa yang perlu diperhatikan saat menentukan jadwal Andi sehingga tidak ada yang terlewat?</h3>
+        <h3 style="color: #ff5722;">Memanajemem waktu agar tidak terbuang sia-sia</h3>
+        <h3 style="color: #9c27b0;">2. Jelaskan alasanmu dalam menentukan urutan kegiatan tersebut!</h3>
+        <h3 style="color: #ff5722;">Karena menurut saya, jadwal ini adalah waktu yang efisien jika Andi memiliki atau tidak memiliki tugas sekolah</h3>
+        <h3 style="color: #9c27b0;">3. Jam berapa Andi dan Raya melakukan chatting waktu lokal rumah Raya?</h3>
+        <h3 style="color: #ff5722;">Pada waktu lokal rumah Raya mereka melakukan chat pada waktu 16:00(jam 4 sore) sampai jam 16:30(setengah 5)</h3>
+        <h3 style="color: #9c27b0;">4. Apakah masih ada waktu untuk Andi memiliki waktu luang? Jam berapakah?</h3>
+        <h3 style="color: #ff5722;">Jika PR telah selesai sebelum pukul 22:00, Andi ada waktu luang dari jam selesainya PR sampai 22:00</h3>
+        <h3 style="color: #9c27b0;">5. Jika Andi tidak memiliki tugas sekolah, berapakah waktu luang yang Andi miliki?</h3>
+        <h3 style="color: #ff5722;">Jika Andi tidak memiliki PR, ia memiliki waktu luang +- 1 jam setelah mengobrol dengan keluarganya</h3>
 </body>
 </html>
